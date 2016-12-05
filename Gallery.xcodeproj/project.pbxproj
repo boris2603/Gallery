@@ -13,6 +13,14 @@
 		3984A9D31DF462C000B61C10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9D11DF462C000B61C10 /* Main.storyboard */; };
 		3984A9D51DF462C000B61C10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9D41DF462C000B61C10 /* Assets.xcassets */; };
 		3984A9D81DF462C000B61C10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9D61DF462C000B61C10 /* LaunchScreen.storyboard */; };
+		3984A9E11DF4660F00B61C10 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9E01DF4660F00B61C10 /* rootViewController.m */; };
+		3984A9E71DF46B0700B61C10 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9E61DF46B0700B61C10 /* MainViewController.m */; };
+		3984A9ED1DF480A000B61C10 /* Belarus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9E81DF480A000B61C10 /* Belarus.jpg */; };
+		3984A9EE1DF480A000B61C10 /* Europe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9E91DF480A000B61C10 /* Europe.jpg */; };
+		3984A9EF1DF480A000B61C10 /* Kazah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9EA1DF480A000B61C10 /* Kazah.jpg */; };
+		3984A9F01DF480A000B61C10 /* Turk.png in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9EB1DF480A000B61C10 /* Turk.png */; };
+		3984A9F11DF480A000B61C10 /* Ukrain.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3984A9EC1DF480A000B61C10 /* Ukrain.jpeg */; };
+		3984A9F41DF490CD00B61C10 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9F31DF490CD00B61C10 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +34,17 @@
 		3984A9D41DF462C000B61C10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3984A9D71DF462C000B61C10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3984A9D91DF462C000B61C10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3984A9DF1DF4660F00B61C10 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
+		3984A9E01DF4660F00B61C10 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
+		3984A9E51DF46B0700B61C10 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		3984A9E61DF46B0700B61C10 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3984A9E81DF480A000B61C10 /* Belarus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Belarus.jpg; sourceTree = "<group>"; };
+		3984A9E91DF480A000B61C10 /* Europe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Europe.jpg; sourceTree = "<group>"; };
+		3984A9EA1DF480A000B61C10 /* Kazah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Kazah.jpg; sourceTree = "<group>"; };
+		3984A9EB1DF480A000B61C10 /* Turk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turk.png; sourceTree = "<group>"; };
+		3984A9EC1DF480A000B61C10 /* Ukrain.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ukrain.jpeg; sourceTree = "<group>"; };
+		3984A9F21DF490CD00B61C10 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3984A9F31DF490CD00B61C10 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +86,12 @@
 				3984A9D61DF462C000B61C10 /* LaunchScreen.storyboard */,
 				3984A9D91DF462C000B61C10 /* Info.plist */,
 				3984A9C81DF462C000B61C10 /* Supporting Files */,
+				3984A9DF1DF4660F00B61C10 /* rootViewController.h */,
+				3984A9E01DF4660F00B61C10 /* rootViewController.m */,
+				3984A9E51DF46B0700B61C10 /* MainViewController.h */,
+				3984A9E61DF46B0700B61C10 /* MainViewController.m */,
+				3984A9F21DF490CD00B61C10 /* DetailViewController.h */,
+				3984A9F31DF490CD00B61C10 /* DetailViewController.m */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -74,6 +99,11 @@
 		3984A9C81DF462C000B61C10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3984A9E81DF480A000B61C10 /* Belarus.jpg */,
+				3984A9E91DF480A000B61C10 /* Europe.jpg */,
+				3984A9EA1DF480A000B61C10 /* Kazah.jpg */,
+				3984A9EB1DF480A000B61C10 /* Turk.png */,
+				3984A9EC1DF480A000B61C10 /* Ukrain.jpeg */,
 				3984A9C91DF462C000B61C10 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -137,6 +167,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3984A9F11DF480A000B61C10 /* Ukrain.jpeg in Resources */,
+				3984A9EE1DF480A000B61C10 /* Europe.jpg in Resources */,
+				3984A9F01DF480A000B61C10 /* Turk.png in Resources */,
+				3984A9ED1DF480A000B61C10 /* Belarus.jpg in Resources */,
+				3984A9EF1DF480A000B61C10 /* Kazah.jpg in Resources */,
 				3984A9D81DF462C000B61C10 /* LaunchScreen.storyboard in Resources */,
 				3984A9D51DF462C000B61C10 /* Assets.xcassets in Resources */,
 				3984A9D31DF462C000B61C10 /* Main.storyboard in Resources */,
@@ -151,8 +186,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3984A9D01DF462C000B61C10 /* ViewController.m in Sources */,
+				3984A9E71DF46B0700B61C10 /* MainViewController.m in Sources */,
 				3984A9CD1DF462C000B61C10 /* AppDelegate.m in Sources */,
+				3984A9E11DF4660F00B61C10 /* rootViewController.m in Sources */,
 				3984A9CA1DF462C000B61C10 /* main.m in Sources */,
+				3984A9F41DF490CD00B61C10 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
