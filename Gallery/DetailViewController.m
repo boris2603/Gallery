@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.imageLabel.text=self.imageText;
+    self.imageData.image=self.imageImage;
+    
     // Do any additional setup after loading the view.
 }
 

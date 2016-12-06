@@ -12,4 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *imageLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageData;
 
+@property (nonatomic,strong) NSString * imageText;
+@property (nonatomic,strong) UIImage * imageImage;
 @end

@@ -110,16 +110,9 @@
         DetailViewController *destinationView = segue.destinationViewController;
         // ToSender.delegate = self;
 
-        destinationView.imageLabel.text=@"Test";
-        
-       /* UIImage *temp_image = [UIImage imageNamed:@"Europe.jpg"]; */
-        
-        // CGSize newSize=CGSizeMake(ToSender.imageData.intrinsicContentSize.height,ToSender.imageData.intrinsicContentSize.width);
-        
-   /*     UIGraphicsBeginImageContext(newSize);
-        [temp_image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-        ToSender.imageData.image= UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext(); */
+        NSIndexPath *index=self.tableView.indexPathForSelectedRow;
+        destinationView.imageText=self.titleArray[index.item];
+        destinationView.imageImage=[UIImage imageNamed:self.imageArray[index.item]];
         
     }
 }
