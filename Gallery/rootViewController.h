@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataFactory.h"
 
 @interface rootViewController : UITableViewController
 
-@property (nonatomic,strong) NSArray *titleArray;
-@property (nonatomic, strong) NSArray *imageArray;
+@property (nonatomic,strong) DataFactory *dataFactory;
 
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		394544411DFD8CD700EAFE36 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 394544401DFD8CD700EAFE36 /* CollectionViewController.m */; };
+		394544441DFD927400EAFE36 /* DataFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 394544431DFD927400EAFE36 /* DataFactory.m */; };
+		394544471DFD98C600EAFE36 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 394544461DFD98C600EAFE36 /* CollectionViewCell.m */; };
 		3984A9CA1DF462C000B61C10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9C91DF462C000B61C10 /* main.m */; };
 		3984A9CD1DF462C000B61C10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9CC1DF462C000B61C10 /* AppDelegate.m */; };
 		3984A9D01DF462C000B61C10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3984A9CF1DF462C000B61C10 /* ViewController.m */; };
@@ -24,6 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3945443F1DFD8CD700EAFE36 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		394544401DFD8CD700EAFE36 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		394544421DFD927400EAFE36 /* DataFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFactory.h; sourceTree = "<group>"; };
+		394544431DFD927400EAFE36 /* DataFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFactory.m; sourceTree = "<group>"; };
+		394544451DFD98C600EAFE36 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		394544461DFD98C600EAFE36 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		3984A9C51DF462C000B61C10 /* Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3984A9C91DF462C000B61C10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3984A9CB1DF462C000B61C10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +101,12 @@
 				3984A9E61DF46B0700B61C10 /* MainViewController.m */,
 				3984A9F21DF490CD00B61C10 /* DetailViewController.h */,
 				3984A9F31DF490CD00B61C10 /* DetailViewController.m */,
+				3945443F1DFD8CD700EAFE36 /* CollectionViewController.h */,
+				394544401DFD8CD700EAFE36 /* CollectionViewController.m */,
+				394544421DFD927400EAFE36 /* DataFactory.h */,
+				394544431DFD927400EAFE36 /* DataFactory.m */,
+				394544451DFD98C600EAFE36 /* CollectionViewCell.h */,
+				394544461DFD98C600EAFE36 /* CollectionViewCell.m */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -187,7 +202,10 @@
 			files = (
 				3984A9D01DF462C000B61C10 /* ViewController.m in Sources */,
 				3984A9E71DF46B0700B61C10 /* MainViewController.m in Sources */,
+				394544441DFD927400EAFE36 /* DataFactory.m in Sources */,
+				394544471DFD98C600EAFE36 /* CollectionViewCell.m in Sources */,
 				3984A9CD1DF462C000B61C10 /* AppDelegate.m in Sources */,
+				394544411DFD8CD700EAFE36 /* CollectionViewController.m in Sources */,
 				3984A9E11DF4660F00B61C10 /* rootViewController.m in Sources */,
 				3984A9CA1DF462C000B61C10 /* main.m in Sources */,
 				3984A9F41DF490CD00B61C10 /* DetailViewController.m in Sources */,
@@ -347,6 +365,7 @@
 				3984A9DE1DF462C000B61C10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

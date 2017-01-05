@@ -18,8 +18,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if(self = [super initWithCoder:aDecoder]) {
-        self.titleArray = @[@"Беларусия", @"Евросоюз", @"Казахстан", @"Турция", @"Украина"];
-        self.imageArray = @[@"Belarus.jpg", @"Europe.jpg", @"Kazah.jpg", @"Turk.png", @"Ukrain.jpeg"];
+        self.dataFactory=[[DataFactory alloc] init];
     }
     return self;
 }
@@ -40,7 +39,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.titleArray.count;
+    return self.dataFactory.titleArray.count;
 }
 
 
@@ -49,10 +48,10 @@
     NSString *cellIdentifier=@"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
 
-    NSString *title=self.titleArray[indexPath.row];
+    NSString *title=self.dataFactory.titleArray[indexPath.row];
     cell.textLabel.text=title;
     
-    UIImage *temp_image = [UIImage imageNamed:self.imageArray[indexPath.row]];
+    UIImage *temp_image = [UIImage imageNamed:self.dataFactory.imageArray[indexPath.row]];
    
     CGSize newSize=CGSizeMake(35.0f, 35.0f);
     
@@ -104,15 +103,15 @@
     // Pass the selected object to the new view controller.
     
     
-   if([segue.identifier isEqualToString:@"DetailView"])
+   if([segue.identifier isEqualToString:@"DetailViewTable"])
     {
     
         DetailViewController *destinationView = segue.destinationViewController;
         // ToSender.delegate = self;
 
         NSIndexPath *index=self.tableView.indexPathForSelectedRow;
-        destinationView.imageText=self.titleArray[index.item];
-        destinationView.imageImage=[UIImage imageNamed:self.imageArray[index.item]];
+        destinationView.imageText=self.dataFactory.titleArray[index.item];
+        destinationView.imageImage=[UIImage imageNamed:self.dataFactory.imageArray[index.item]];
         
     }
 }

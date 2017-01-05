@@ -10,4 +10,16 @@
 
 @implementation DataFactory
 
+- (instancetype)init
+{
+ if (self== [super init])
+ {
+    
+    self.titleArray = @[@"Беларусия", @"Евросоюз", @"Казахстан", @"Турция", @"Украина"];
+    self.imageArray = @[@"Belarus.jpg", @"Europe.jpg", @"Kazah.jpg", @"Turk.png", @"Ukrain.jpeg"];
+ }
+ return self;
+};
+
+
 @end

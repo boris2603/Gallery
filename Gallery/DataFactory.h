@@ -10,4 +10,7 @@
 
 @interface DataFactory : NSObject
 
+@property (nonatomic,strong) NSArray *titleArray;
+@property (nonatomic, strong) NSArray *imageArray;
+
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataFactory.h"
 
-@interface CollectionCollectionViewController : UICollectionViewController
+@interface CollectionViewController : UICollectionViewController
+
+@property (nonatomic,strong) DataFactory *dataFactory;
 
 @end

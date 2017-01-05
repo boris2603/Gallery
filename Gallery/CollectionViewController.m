@@ -6,16 +6,26 @@
 //  Copyright © 2016 Борис Гузиенко. All rights reserved.
 //
 
-#import "CollectionCollectionViewController.h"
+#import "CollectionViewController.h"
 #import "DetailViewController.h"
+#import "CollectionViewCell.h"
 
-@interface CollectionCollectionViewController ()
+@interface CollectionViewController ()
 
 @end
 
-@implementation CollectionCollectionViewController
+@implementation CollectionViewController
 
-static NSString * const reuseIdentifier = @"Cell";
+static NSString * const reuseIdentifier = @"CollectionCell";
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if(self = [super initWithCoder:aDecoder]) {
+        self.dataFactory=[[DataFactory alloc] init];
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,7 +34,7 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    // [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -33,6 +43,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 #pragma mark - Navigation
@@ -45,49 +56,39 @@ static NSString * const reuseIdentifier = @"Cell";
         
         DetailViewController *destinationView = segue.destinationViewController;
        
-        NSIndexPath *index=self.tableView.indexPathForSelectedRow;
-        destinationView.imageText=self.titleArray[index.item];
-        destinationView.imageImage=[UIImage imageNamed:self.imageArray[index.item]];
+        NSIndexPath *index=[self.collectionView indexPathsForSelectedItems][0];
+        
+        destinationView.imageText=self.dataFactory.titleArray[index.row];
+        destinationView.imageImage=[UIImage imageNamed:self.dataFactory.imageArray[index.row]];
         
     }
 
 }
 
-
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of items
-    return 10;
+    return self.dataFactory.titleArray.count;
+//    return 10;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    NSString *cellIdentifier=@"cell";
-    UITableViewCell *cell = [collectionView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    CollectionViewCell *cellItem = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    NSString *title=self.titleArray[indexPath.row];
-    cell.textLabel.text=title;
+    NSString * title=self.dataFactory.titleArray[indexPath.row];
+    UIImage * imgData= [UIImage imageNamed:self.dataFactory.imageArray[indexPath.row]];
     
-    UIImage *temp_image = [UIImage imageNamed:self.imageArray[indexPath.row]];
+    cellItem.imageTitle.text=title;
+    cellItem.imageData.image=imgData;
     
-    CGSize newSize=CGSizeMake(35.0f, 35.0f);
     
-    UIGraphicsBeginImageContext(newSize);
-    [temp_image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    cell.imageView.image= UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return cell;
-    
-    return cell;
+    return cellItem;
 }
 
 #pragma mark <UICollectionViewDelegate>

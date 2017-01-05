@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "rootViewController.h"
 
 @interface DetailViewController ()
 
@@ -17,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.imageLabel.text=self.imageText;
     self.imageData.image=self.imageImage;
     
@@ -28,8 +30,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -39,10 +42,8 @@
     
     rootViewController *fromSender = segue.destinationViewController;
     
-    if([segue.identifier isEqualToString:@"DetailView"])
+    if([segue.identifier isEqualToString:@"DetailViewTable"])
     {
-
-        self.imageLabel.text=fromSender.tableView.
         
         UIImage *temp_image = [UIImage imageNamed:@"Europe.jpg"];
         
@@ -53,6 +54,19 @@
         self.imageData.image= UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
-} */
-
+    if([segue.identifier isEqualToString:@"DetailViewCollection"])
+    {
+        
+        UIImage *temp_image = [UIImage imageNamed:@"Kazan.jpg"];
+        
+        CGSize newSize=CGSizeMake(self.imageData.intrinsicContentSize.height,self.imageData.intrinsicContentSize.width);
+        
+        UIGraphicsBeginImageContext(newSize);
+        [temp_image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        self.imageData.image= UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    
+}
+*/
 @end
